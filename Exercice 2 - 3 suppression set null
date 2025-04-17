@@ -1,0 +1,2 @@
+l'option SET NULL a supprimer l'hotel mais pas les enregistrements enfants.
+l'id est rester le meme au lieu de passé a NULL car la colonne est en int et en not null.
