@@ -1,0 +1,7 @@
+je commence par cree une colonne dans la table hotel pour stocker la date de mise a jour:
+
+ALTER TABLE hotels 
+ADD COLUMN date_update TIMESTAMP NULL DEFAULT NULL;
+
+puis je cree mon trigger:
+
