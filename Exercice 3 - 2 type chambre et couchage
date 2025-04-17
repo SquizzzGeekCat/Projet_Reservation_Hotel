@@ -1,0 +1,17 @@
+la requete utiliser :
+
+SELECT
+    ct.id,
+    ct.nom,
+    sdb.nom AS salle_de_bain,
+    ctc.qte AS Qte,
+    c.nom as Type_couchage,
+    c.nb_places as nb_places_dodo
+FROM
+    `chambre_types` AS ct
+LEFT JOIN
+    `salles_de_bain` AS sdb ON ct.id_salle_de_bain = sdb.id
+LEFT JOIN
+	`chambre_type_couchage` AS ctc ON ctc.id_type = ct.id
+LEFT JOIN
+	`couchages` AS c ON c.id = ctc.id_couchage;

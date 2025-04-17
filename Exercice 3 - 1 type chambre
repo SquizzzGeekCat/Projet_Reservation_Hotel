@@ -1,0 +1,13 @@
+la requete utiliser :
+
+SELECT * FROM `chambre_types` as ct LEFT JOIN `salles_de_bain` as sdb on ct.id_salle_de_bain = sdb.id;
+
+pour ne pas avoir les colonnes id:
+SELECT
+    ct.id,
+    ct.nom,
+    sdb.nom AS salle_de_bain_nom
+FROM
+    `chambre_types` AS ct
+LEFT JOIN
+    `salles_de_bain` AS sdb ON ct.id_salle_de_bain = sdb.id;
