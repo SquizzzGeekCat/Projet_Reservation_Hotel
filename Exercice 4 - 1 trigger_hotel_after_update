@@ -5,3 +5,7 @@ ADD COLUMN date_update TIMESTAMP NULL DEFAULT NULL;
 
 puis je cree mon trigger:
 
+CREATE TRIGGER `trigger_hotel_after_update` BEFORE UPDATE ON `hotels` FOR EACH ROW SET NEW.date_update = NOW();
+
+du coup j'ai fais un before car on ne peut pas faire un after apres un update
+
