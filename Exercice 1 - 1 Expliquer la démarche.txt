@@ -1,0 +1,5 @@
+Exercice 1 - 1 Expliquer la démarche
+
+j'ai commencer par ouvrir le fichier et je l'ai parcouru. 
+j'ai vue certaines erreur comme le ENGINE et des doublons mais également des AUTOINCREMENTE qui était des résidue de l'exportations que j'ai modifier.
+Pour les autres erreurs, je me suis servis de la détection d'erreur de phpMyAdmin lors de l'inportation de la BDD. 
