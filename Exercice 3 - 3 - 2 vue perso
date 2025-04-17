@@ -1,0 +1,19 @@
+requete 2 :
+
+CREATE VIEW chambre_prix_desc AS
+SELECT
+    t.id,
+    h.libelle,
+    ct.nom,
+    t.prix
+FROM
+    tarifs AS t
+LEFT JOIN
+    hotels AS h ON t.id_hotel = h.id
+LEFT JOIN
+    chambre_types AS ct ON t.id_type = ct.id
+ORDER BY
+    t.prix ASC;
+
+
+j'ai crée cette vue car je pense qu'elle peut etre utiliser de nombreuses fois par les clients pour connaitre le prix des chambres les moins chère.

@@ -16,3 +16,6 @@ LEFT JOIN
 	`chambre_type_couchage` AS ctc ON ctc.id_type = ct.id
 LEFT JOIN
 	`couchages` AS c ON c.id = ctc.id_couchage;
+
+
+    
