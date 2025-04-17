@@ -1,0 +1,3 @@
+la suppression en cascade supprime les enfants qui sont relier a la ligne parente.
+
+suppression des chambres et des tarifs liées a l'hotel 1.
