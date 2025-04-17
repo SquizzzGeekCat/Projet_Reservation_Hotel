@@ -1,0 +1,27 @@
+requete :
+
+SELECT
+    t.id,
+    t.id_hotel,
+    t.id_type,
+    t.dateDebut,
+    t.prix,
+    MAX(t.dateDebut) OVER (PARTITION BY t.id_hotel, t.id_type) AS date_fin
+FROM
+    tarifs t
+WHERE
+    EXISTS (
+        SELECT 1
+        FROM tarifs t2
+        WHERE t2.id_hotel = t.id_hotel
+          AND t2.id_type = t.id_type
+          AND t2.dateDebut <> t.dateDebut
+    );
+
+Pour cette requete j'ai due rechercher sur internet. elle fonctionne, parcontre je suis pas sur de savoir bien l'expliquer. 
+    PARTITION BY va regrouper des enregistrement qui se ressemble.
+    OVER regroupe une partition 
+
+ces deux options permette de parcourir tout les enregistrements
+
+le WHERE ajoute une condition pour retrouver les enregistrements qui ont le meme type et le meme hotel et recupère la dateDebut du plus recent 

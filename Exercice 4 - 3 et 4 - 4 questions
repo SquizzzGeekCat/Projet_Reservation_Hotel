@@ -1,0 +1,4 @@
+oui on peut mettre deux trigger sur la meme table selon l'êvenement que l'on choisi
+
+oui on peut mettre deux trigger sur le meme evenement suivant si on met un BEFORE ou un AFTER.
+l'action se passera avant ou apres une action.
