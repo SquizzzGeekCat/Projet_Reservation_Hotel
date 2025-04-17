@@ -1,0 +1,10 @@
+l'export de la validation:
+
+
+CREATE TRIGGER `trigger_regle_prix` BEFORE UPDATE ON `tarifs`
+ FOR EACH ROW IF NEW.prix <= OLD.prix THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Le prix ne peut qu'être supérieur';
+    END IF
+
+j'ai choisi se titre car il represente bien la regle que sur le prix.
